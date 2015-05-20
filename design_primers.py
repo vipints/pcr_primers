@@ -3,7 +3,6 @@
 wrapper for primer3 primer design program
 """
 
-
 import os 
 import sys 
 from gfftools import GFFParser
