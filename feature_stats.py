@@ -11,7 +11,6 @@ def get_features(gtf_file, fa_file):
     """
     core function
     """
-    
     gtf_content = GFFParser.Parse(gtf_file) 
     
     print len(gtf_content)
@@ -19,8 +18,8 @@ def get_features(gtf_file, fa_file):
 
 if __name__=="__main__":
 
-    gtf_fname = "/home/vipin/data/H_sapiens/GRCh38/out.gff.bz2"
-    fas_fname = "/home/vipin/data/H_sapiens/GRCh38/out.fas.bz2"
+    gtf_fname = "data/H_sapiens/GRCh38/out.gff.bz2"
+    fas_fname = "data/H_sapiens/GRCh38/out.fas.bz2"
 
-    get_features()
+    get_features(gtf_fname, fas_fname)
 
