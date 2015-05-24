@@ -13,8 +13,13 @@ def get_features(gtf_file, fa_file):
     """
     gtf_content = GFFParser.Parse(gtf_file) 
     
-    print len(gtf_content)
-
+    cds_exons = 0 
+    utr3_exons = 0 
+    for idp, feat in enumerate(gtf_content):
+        if not feat['cds_exons'][0].any():
+            cds_exons += 1 
+        if not feat['utr3_exons'][0].any():
+            utr3_exons += 1 
 
 if __name__=="__main__":
 
