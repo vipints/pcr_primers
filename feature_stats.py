@@ -9,13 +9,19 @@ from gfftools import GFFParser
 
 def get_features(gtf_file, fa_file):
     """
-    core function
+    TODO
+    get the total number of genes based on the annotation source  
+    # of coding genes 
+    genes with 3' 5' UTR
+    other different class of genes
     """
-    gtf_content = GFFParser.Parse(gtf_file) 
+
+    anno_db = GFFParser.Parse(gtf_file) 
     
     cds_exons = 0 
     utr3_exons = 0 
-    for idp, feat in enumerate(gtf_content):
+
+    for feat in anno_db:
         if not feat['cds_exons'][0].any():
             cds_exons += 1 
         if not feat['utr3_exons'][0].any():
