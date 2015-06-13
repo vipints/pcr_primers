@@ -5,6 +5,7 @@ wrapper for primer3 primer design program
 
 import os 
 import sys 
+import primer3
 from gfftools import GFFParser
 
 def main():
