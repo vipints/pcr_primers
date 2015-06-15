@@ -17,7 +17,16 @@ def get_features(gtf_file, fa_file):
     """
 
     anno_db = GFFParser.Parse(gtf_file) 
+    total_genes = len(anno_db) 
+
+    cds_idx = []
+    for idp, feat in enumerate(anno_db):
+        if not feat['cds_exons'][0].any():
+            cds_idx.append(idp)
     
+    # total coding genes 
+    # total noncoding genes 
+
     cds_exons = 0 
     utr3_exons = 0 
 
